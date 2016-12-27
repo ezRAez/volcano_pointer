@@ -10,7 +10,7 @@ avg_lon = vol_df['LON'].mean()
 def color_picker(elevation):
     minimum = int(min(vol_df['ELEV']))
     step = int((max(vol_df['ELEV']) - min(vol_df['ELEV'])) / 3)
-    if elevation in range(minimum, step):
+    if elevation in range(minimum, minimum+step):
         return "green"
     elif elevation in range(minimum + step, minimum + step * 2):
         return "orange"
